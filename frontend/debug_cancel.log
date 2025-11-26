@@ -1,0 +1,32 @@
+2025-11-26 22:39:33 - ==== cancel request ====
+2025-11-26 22:39:33 - REQUEST_METHOD: GET
+2025-11-26 22:39:33 - GET: {"booking_id":"8"}
+2025-11-26 22:39:33 - POST: []
+2025-11-26 22:39:33 - SESSION: {"user_id":"2","role":"customer","name":"customer"}
+2025-11-26 22:39:33 - Cancel successful for booking_id=8, spot_id=1
+2025-11-26 22:40:34 - ==== cancel request ====
+2025-11-26 22:40:34 - REQUEST_METHOD: GET
+2025-11-26 22:40:34 - GET: {"booking_id":"8"}
+2025-11-26 22:40:34 - POST: []
+2025-11-26 22:40:34 - SESSION: {"user_id":"2","role":"customer","name":"customer"}
+2025-11-26 22:40:34 - Booking already not in booked state. booking_id=8 status=cancelled
+2025-11-26 22:40:34 - Cancel transaction failed: Booking is not active (already cancelled or completed).
+2025-11-26 22:40:35 - ==== cancel request ====
+2025-11-26 22:40:35 - REQUEST_METHOD: GET
+2025-11-26 22:40:35 - GET: {"booking_id":"8"}
+2025-11-26 22:40:35 - POST: []
+2025-11-26 22:40:35 - SESSION: {"user_id":"2","role":"customer","name":"customer"}
+2025-11-26 22:40:35 - Booking already not in booked state. booking_id=8 status=cancelled
+2025-11-26 22:40:35 - Cancel transaction failed: Booking is not active (already cancelled or completed).
+2025-11-26 22:40:56 - ==== cancel request ====
+2025-11-26 22:40:56 - REQUEST_METHOD: GET
+2025-11-26 22:40:56 - GET: {"booking_id":"9"}
+2025-11-26 22:40:56 - POST: []
+2025-11-26 22:40:56 - SESSION: {"user_id":"2","role":"customer","name":"customer"}
+2025-11-26 22:40:56 - Cancel successful for booking_id=9, spot_id=1
+2025-11-26 22:41:40 - ==== cancel request ====
+2025-11-26 22:41:40 - REQUEST_METHOD: GET
+2025-11-26 22:41:40 - GET: {"booking_id":"10"}
+2025-11-26 22:41:40 - POST: []
+2025-11-26 22:41:40 - SESSION: {"user_id":"2","role":"customer","name":"customer"}
+2025-11-26 22:41:40 - Cancel successful for booking_id=10, spot_id=3

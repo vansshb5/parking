@@ -1,0 +1,32 @@
+2025-11-26 22:33:32 - ==== new request ====
+2025-11-26 22:33:32 - REQUEST_METHOD: POST
+2025-11-26 22:33:32 - POST: {"spot_id":"2","hours":"1"}
+2025-11-26 22:33:32 - GET: []
+2025-11-26 22:33:32 - SESSION: {"user_id":"2","role":"customer","name":"customer"}
+2025-11-26 22:33:33 - Spot 2 available_slots = 10
+2025-11-26 22:33:33 - Booking inserted, id = 7
+2025-11-26 22:33:33 - available_slots decremented for spot 2
+2025-11-26 22:35:35 - ==== new request ====
+2025-11-26 22:35:35 - REQUEST_METHOD: POST
+2025-11-26 22:35:35 - POST: {"spot_id":"1","hours":"1"}
+2025-11-26 22:35:35 - GET: []
+2025-11-26 22:35:35 - SESSION: {"user_id":"2","role":"customer","name":"customer"}
+2025-11-26 22:35:35 - Spot 1 available_slots = 53
+2025-11-26 22:35:35 - Booking inserted, id = 8
+2025-11-26 22:35:35 - available_slots decremented for spot 1
+2025-11-26 22:40:54 - ==== new request ====
+2025-11-26 22:40:54 - REQUEST_METHOD: POST
+2025-11-26 22:40:54 - POST: {"spot_id":"1","hours":"1"}
+2025-11-26 22:40:54 - GET: []
+2025-11-26 22:40:54 - SESSION: {"user_id":"2","role":"customer","name":"customer"}
+2025-11-26 22:40:54 - Spot 1 available_slots = 53
+2025-11-26 22:40:54 - Booking inserted, id = 9
+2025-11-26 22:40:54 - available_slots decremented for spot 1
+2025-11-26 22:41:33 - ==== new request ====
+2025-11-26 22:41:33 - REQUEST_METHOD: POST
+2025-11-26 22:41:33 - POST: {"spot_id":"3","hours":"2"}
+2025-11-26 22:41:33 - GET: []
+2025-11-26 22:41:33 - SESSION: {"user_id":"2","role":"customer","name":"customer"}
+2025-11-26 22:41:33 - Spot 3 available_slots = 99
+2025-11-26 22:41:33 - Booking inserted, id = 10
+2025-11-26 22:41:33 - available_slots decremented for spot 3
