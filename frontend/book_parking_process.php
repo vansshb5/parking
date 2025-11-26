@@ -41,7 +41,7 @@ if ($conn->query($sql) === TRUE) {
     // 3. Reduce available slots by 1
     $conn->query("UPDATE parking_spots SET available_slots = available_slots - 1 WHERE spot_id='$spot_id'");
 
-    echo "Booking successful! <a href='customer_dashboard.php'>Back to Dashboard</a>";
+    header("Location: book_parking.php");
 } else {
     echo "Error: " . $conn->error;
 }

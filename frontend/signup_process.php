@@ -22,7 +22,7 @@ $sql = "INSERT INTO users (name, email, password, role)
         VALUES ('$name', '$email', '$hashed_password', '$role')";
 
 if ($conn->query($sql) === TRUE) {
-    echo "Signup successful! <a href='login.php'>Login Now</a>";
+    header("Location: login.php");
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
 }

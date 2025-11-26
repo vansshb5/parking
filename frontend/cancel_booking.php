@@ -35,7 +35,7 @@ $conn->query("UPDATE bookings SET status='cancelled' WHERE booking_id='$booking_
 // 2. Increase available slots back by 1
 $conn->query("UPDATE parking_spots SET available_slots = available_slots + 1 WHERE spot_id='$spot_id'");
 
-echo "Booking cancelled successfully. <a href='view_bookings_customer.php'>Back</a>";
+header("Location: book_parking.php");
 
 $conn->close();
 ?>

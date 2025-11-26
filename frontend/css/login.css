@@ -73,7 +73,7 @@ form{
 .input-box input{
     width:100%;
     padding: 13px 50px 13px 20px;
-    background: #eee;
+    background: #000000;
     border-radius: 8px;
     border: none;
     outline:none;
@@ -83,7 +83,7 @@ form{
 }
 
 .input-box input::placeholder{
-    color:#888;
+    color:#ff0000;
     font-weight:400;
 }
 

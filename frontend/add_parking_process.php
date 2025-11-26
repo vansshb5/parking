@@ -26,7 +26,7 @@ $sql = "INSERT INTO parking_spots (owner_id, location, price_per_hour, total_slo
         VALUES ('$owner_id', '$location', '$price', '$total_slots', '$available_slots')";
 
 if ($conn->query($sql) === TRUE) {
-    echo "Parking spot added successfully! <a href='owner_dashboard.php'>Go Back</a>";
+    header("Location: add_parking.php");
 } else {
     echo "Error: " . $conn->error;
 }
