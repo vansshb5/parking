@@ -14,18 +14,18 @@
 </head>
 <body>
   <section class="header">
-    <a href="home.php" class="logo">travel.</a>
+    <a href="home.php" class="logo">parking.</a>
     <nav class="navbar">
       <a href="home.php">home</a>
-      <a href="about.php">about</a>
-      <a href="package.php">package</a>
-      <a href="book.php">book</a>
+      <a href="about.php">view-parking</a>
+      <a href="package.php">pre-book</a>
+      <a href="book.php">refund</a>
     </nav>
     <div id="menu-btn" class="fas fa-bars"></div>
   </section>
 
   <div class="heading" style="background:url(images/heading-bg-1.png) no-repeat">
-    <h1>about us</h1>
+    <h1>view parking</h1>
   </div>
  <section class="about">
   <div class="image">
@@ -50,70 +50,60 @@
       </div>
     </div>
 
-  </div>
  </section>
-
+  <h1 class="heading-title">Parking lots available</h1>
+  </div>
+    <div class="box-container">
+      <div id="map"></div>
+  </div>
  <section class="reviews">
   <div class="swiper reviews-slider">
     <div class="swiper-wrapper">
+
       <div class="swiper-slide slide">
         <div class="stars">
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
         </div>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque repudiandae sunt dignissimos tempore, itaque, facilis enim veritatis veniam assumenda, possimus eveniet incidunt odit dolore quod nobis sit in dolores beatae.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
         <h3>piyush chander</h3>
         <span>traveler</span>
         <img src="images/pic-1.png" alt="">
       </div>
-         <div class="swiper-slide slide">
+
+      <div class="swiper-slide slide">
         <div class="stars">
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-        
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
         </div>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing e dolores beatae.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing...</p>
         <h3>karan gupta</h3>
         <span>traveler</span>
         <img src="images/pic-2.png" alt="">
       </div>
-         <div class="swiper-slide slide">
+
+      <div class="swiper-slide slide">
         <div class="stars">
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-             <i class="fas fa-star"></i>
-          
-        
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
         </div>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque repudiandae sunt dignissimos tempore, itaque, facilis enim veritatis veniam assumenda, possimus eveniet incidunt odit dolore quod nobis sit in dolores beatae.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
         <h3>chirag mahajan</h3>
         <span>traveler</span>
         <img src="images/pic-3.png" alt="">
       </div>
-    </div>
-       <div class="swiper-slide slide">
+
+      <div class="swiper-slide slide">
         <div class="stars">
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-           <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i> 
-          
-        
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
         </div>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque repudiandae sunt dignissimos tempore, itaque, facilis enim veritatis ven.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
         <h3>avigat kalra</h3>
         <span>traveler</span>
         <img src="images/pic-4.png" alt="">
       </div>
+
     </div>
   </div>
- </section>
+</section>
+
 <!--footer-->
 <section class="footer">
   <div class="box-container">

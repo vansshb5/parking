@@ -18,9 +18,9 @@
     <a href="home.php" class="logo">parking.</a>
     <nav class="navbar">
       <a href="home.php">home</a>
-      <a href="about.php">about</a>
-      <a href="package.php">package</a>
-      <a href="book.php">book</a>
+      <a href="about.php">view-parking</a>
+      <a href="package.php">pre-book</a>
+      <a href="book.php">refund</a>
     </nav>
     <div id="menu-btn" class="fas fa-bars"></div>
   </section>
@@ -61,35 +61,24 @@
     <h1 class="heading-title">our services</h1>
 
     <div class="box-container">
-      <div class="box">
+     <a href="package.php"><div class="box">
          <img src="images/trip.png" alt="tour guide">
-        <h3>adventure</h3>
-      </div>
+        <h3>pre-booking</h3>
+      </div></a> 
 
-      <div class="box">
+     <a href="book.php"><div class="box">
         <img src="images/backpack.png" alt="tour guide">
-        <h3>tour guide</h3>
-      </div>
+        <h3>refunding</h3>
+      </div></a> 
 
-      <div class="box">
+      <a href="about.php"><div class="box">
         <img src="images/mountain-peak.png" alt="trekking">
-        <h3>trekking</h3>
-      </div>
+        <h3>view-parking</h3>
+      </div></a>
 
-      <div class="box">
-        <img src="images/backpack-star.png" alt="camp fire">
-        <h3>camp fire</h3>
-      </div>
-
-      <div class="box">
-        <img src="images/motorcycle.png" alt="off road">
-        <h3>off road</h3>
-      </div>
-
-      <div class="box">
-        <img src="images/tent.png" alt="camping">
-        <h3>camping</h3>
-      </div>
+    
+     
+    
     </div>
   </section>
 <section class="home-about">

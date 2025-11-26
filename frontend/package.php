@@ -11,18 +11,18 @@
 </head>
 <body>
   <section class="header">
-    <a href="home.php" class="logo">travel.</a>
+    <a href="home.php" class="logo">parking.</a>
     <nav class="navbar">
       <a href="home.php">home</a>
       <a href="about.php">about</a>
-      <a href="package.php">package</a>
-      <a href="book.php">book</a>
+      <a href="package.php">pre-book</a>
+      <a href="book.php">refund</a>
     </nav>
     <div id="menu-btn" class="fas fa-bars"></div>
   </section>
 
   <div class="heading" style="background:url(images/heading-bg-2.png) no-repeat">
-    <h1>Package</h1>
+    <h1>pre-booking</h1>
   </div>
 
 <!--footer-->
