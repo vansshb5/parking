@@ -627,6 +627,82 @@ section {
         padding: 4rem 2rem;
     }
 }
+/* -------- OWNER DASHBOARD -------- */
+.owner-dashboard {
+    padding: 6rem 10%;
+    background: #0d0d0d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.owner-dashboard-container {
+    text-align: center;
+    max-width: 90rem;
+    width: 100%;
+}
+
+.owner-dashboard-title {
+    font-size: 4.2rem;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 1rem;
+}
+
+.owner-dashboard-sub {
+    font-size: 1.8rem;
+    color: var(--light-white);
+    margin-bottom: 5rem;
+}
+
+.owner-dashboard-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    justify-content: center;
+}
+
+.owner-dashboard-box {
+    flex: 1 1 32rem;
+    background: #111;
+    padding: 3rem;
+    border-radius: 1.2rem;
+    text-align: center;
+    border: 1px solid rgba(255,255,255,0.08);
+    box-shadow: 0 0 20px rgba(0,0,0,0.45);
+    color: var(--white);
+    transition: 0.35s ease;
+}
+
+.owner-dashboard-box:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0 30px rgba(142,68,173,0.45);
+}
+
+.owner-dashboard-box i {
+    font-size: 5rem;
+    margin-bottom: 2rem;
+    color: var(--main-color);
+}
+
+.owner-dashboard-box h3 {
+    font-size: 2.6rem;
+    font-weight: 600;
+    color: var(--white);
+    margin-bottom: 1rem;
+}
+
+.owner-dashboard-box p {
+    font-size: 1.6rem;
+    color: var(--light-white);
+}
+
+/* Mobile */
+@media (max-width: 650px) {
+    .owner-dashboard-box {
+        flex: 1 1 100%;
+    }
+}
 
 
 /* ---------- FOOTER ---------- */

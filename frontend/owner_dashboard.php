@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>pre-booking</title>
+  <title>owner_dashboard</title>
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
   <link rel="stylesheet" href="css/style.css">
@@ -24,6 +24,32 @@
   <div class="heading" style="background:url(images/heading-bg-2.png) no-repeat">
     <h1>pre-booking</h1>
   </div>
+<section class="owner-dashboard">
+
+  <div class="owner-dashboard-container">
+
+    <h2 class="owner-dashboard-title">Owner Dashboard</h2>
+    <p class="owner-dashboard-sub">Manage your parking spaces quickly and easily.</p>
+
+    <div class="owner-dashboard-buttons">
+
+      <a href="add_parking.php" class="owner-dashboard-box">
+        <i class="fas fa-plus-circle"></i>
+        <h3>Add Parking</h3>
+        <p>Add a new parking location and available slots.</p>
+      </a>
+
+      <a href="view_parking.php" class="owner-dashboard-box">
+        <i class="fas fa-car-side"></i>
+        <h3>View Parking</h3>
+        <p>See your parked locations, slots, price & availability.</p>
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
 
 <!--footer-->
 <section class="footer">

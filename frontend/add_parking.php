@@ -45,7 +45,7 @@
 
             <div class="owner-input-group">
                 <label>Price per hour:</label>
-                <input type="number" name="price_per_hour" step="0.01" required>
+                <input type="number" name="price" step="0.01" required>
             </div>
 
             <div class="owner-input-group">
@@ -57,7 +57,7 @@
 
             <input type="hidden" name="owner_id" value="<?php echo $_SESSION['user_id']; ?>">
 
-            <button type="submit" class="owner-btn">Add Parking</button>
+            <a href="owner_dashboard.php"><button type="submit" class="owner-btn">Add Parking</button></a>
         </form>
     </div>
 

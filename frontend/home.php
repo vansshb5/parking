@@ -19,7 +19,7 @@
     <nav class="navbar">
       <a href="home.php">home</a>
       <a href="about.php">view-parking</a>
-      <a href="package.php">pre-book</a>
+      <a href="login.php">login</a>
       <a href="book.php">refund</a>
     </nav>
     <div id="menu-btn" class="fas fa-bars"></div>
@@ -61,7 +61,7 @@
     <h1 class="heading-title">our services</h1>
 
     <div class="box-container">
-     <a href="package.php"><div class="box">
+     <a href="login.php"><div class="box">
          <img src="images/trip.png" alt="tour guide">
         <h3>pre-booking</h3>
       </div></a> 
