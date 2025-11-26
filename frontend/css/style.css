@@ -948,6 +948,128 @@ section {
     font-size: 3rem;
   }
 }
+/* ---------- CUSTOMER PARKING SEARCH PAGE ---------- */
+
+.customer-search-section {
+  padding: 6rem 10%;
+  background: #0d0d0d;
+  min-height: 70vh;
+}
+
+.customer-search-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4rem;
+}
+
+.customer-search-title {
+  font-size: 4rem;
+  color: var(--white);
+  font-weight: 700;
+}
+
+.customer-search-form {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+  justify-content: center;
+}
+
+.customer-search-form input {
+  width: 45%;
+  padding: 1.4rem;
+  font-size: 1.8rem;
+  border-radius: .7rem;
+  background: #1a1a1a;
+  color: var(--white);
+  border: 1px solid rgba(255,255,255,0.15);
+  transition: .3s;
+}
+
+.customer-search-form input:focus {
+  border: 1px solid var(--main-color);
+  box-shadow: 0 0 8px rgba(142,68,173,0.55);
+}
+
+.customer-search-btn {
+  padding: 1.4rem 2.8rem;
+  font-size: 1.8rem;
+  font-weight: 600;
+  background: var(--main-color);
+  border-radius: .7rem;
+  color: var(--white);
+  cursor: pointer;
+  transition: .3s;
+}
+
+.customer-search-btn:hover {
+  background: #000;
+  transform: scale(1.05);
+}
+
+/* ---------- Table ---------- */
+.customer-search-table-container {
+  overflow-x: auto;
+  border-radius: 1rem;
+}
+
+.customer-search-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1.6rem;
+  overflow: hidden;
+}
+
+.customer-search-table thead {
+  background: var(--main-color);
+  color: var(--white);
+}
+
+.customer-search-table th,
+.customer-search-table td {
+  padding: 1.6rem;
+  text-align: center;
+}
+
+.customer-search-table tbody tr {
+  background: #1a1a1a;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  color: var(--white);
+}
+
+.customer-search-table tbody tr:nth-child(even) {
+  background: #161616;
+}
+
+.customer-search-table tbody tr:hover {
+  background: rgba(142, 68, 173, 0.3);
+  transition: .25s;
+}
+
+.customer-search-book-btn {
+  padding: .8rem 2rem;
+  border-radius: .6rem;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--white);
+  background: var(--main-color);
+  transition: .25s;
+}
+
+.customer-search-book-btn:hover {
+  background: #000;
+}
+
+/* Responsive */
+@media (max-width: 650px) {
+  .customer-search-form {
+    flex-direction: column;
+  }
+  .customer-search-form input {
+    width: 100%;
+  }
+}
 
 /* ---------- FOOTER ---------- */
 .footer {
