@@ -1,111 +1,337 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Login/Sign-up</title>
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
-    crossorigin="" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
-  <link rel="stylesheet" href="css/login.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
 
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: #f6f5f7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Montserrat', sans-serif;
+    height: 100vh;
+    margin: -20px 0 50px;
+}
+
+h1 {
+    font-weight: bold;
+    margin: 0;
+}
+
+h2 {
+    text-align: center;
+}
+
+p {
+    font-size: 14px;
+    font-weight: 100;
+    line-height: 20px;
+    letter-spacing: 0.5px;
+    margin: 20px 0 30px;
+}
+
+span {
+    font-size: 12px;
+}
+
+a {
+    color: #333;
+    font-size: 14px;
+    text-decoration: none;
+    margin: 15px 0;
+}
+
+button {
+    border-radius: 20px;
+    border: 1px solid #FF4B2B;
+    background-color: #FF4B2B;
+    color: #FFFFFF;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 12px 45px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: transform 80ms ease-in;
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+button:focus {
+    outline: none;
+}
+
+button.ghost {
+    background-color: transparent;
+    border-color: #FFFFFF;
+}
+
+form {
+    background-color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 50px;
+    height: 100%;
+    text-align: center;
+}
+
+input, select {
+    background-color: #eee;
+    border: none;
+    padding: 12px 15px;
+    margin: 8px 0;
+    width: 100%;
+}
+
+.container {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25),
+            0 10px 10px rgba(0,0,0,0.22);
+    position: relative;
+    overflow: hidden;
+    width: 768px;
+    max-width: 100%;
+    min-height: 480px;
+}
+
+.form-container {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    transition: all 0.6s ease-in-out;
+}
+
+.sign-in-container {
+    left: 0;
+    width: 50%;
+    z-index: 2;
+}
+
+.container.right-panel-active .sign-in-container {
+    transform: translateX(100%);
+}
+
+.sign-up-container {
+    left: 0;
+    width: 50%;
+    opacity: 0;
+    z-index: 1;
+}
+
+.container.right-panel-active .sign-up-container {
+    transform: translateX(100%);
+    opacity: 1;
+    z-index: 5;
+    animation: show 0.6s;
+}
+
+@keyframes show {
+    0%, 49.99% {
+        opacity: 0;
+        z-index: 1;
+    }
+    
+    50%, 100% {
+        opacity: 1;
+        z-index: 5;
+    }
+}
+
+.overlay-container {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    transition: transform 0.6s ease-in-out;
+    z-index: 100;
+}
+
+.container.right-panel-active .overlay-container{
+    transform: translateX(-100%);
+}
+
+.overlay {
+    background: #FF416C;
+    background: -webkit-linear-gradient(to right, #FF4B2B, #FF416C);
+    background: linear-gradient(to right, #FF4B2B, #FF416C);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0 0;
+    color: #FFFFFF;
+    position: relative;
+    left: -100%;
+    height: 100%;
+    width: 200%;
+    transform: translateX(0);
+    transition: transform 0.6s ease-in-out;
+}
+
+.container.right-panel-active .overlay {
+    transform: translateX(50%);
+}
+
+.overlay-panel {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    top: 0;
+    height: 100%;
+    width: 50%;
+    transform: translateX(0);
+    transition: transform 0.6s ease-in-out;
+}
+
+.overlay-left {
+    transform: translateX(-20%);
+}
+
+.container.right-panel-active .overlay-left {
+    transform: translateX(0);
+}
+
+.overlay-right {
+    right: 0;
+    transform: translateX(0);
+}
+
+.container.right-panel-active .overlay-right {
+    transform: translateX(20%);
+}
+
+.social-container {
+    margin: 20px 0;
+}
+
+.social-container a {
+    border: 1px solid #DDDDDD;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 5px;
+    height: 40px;
+    width: 40px;
+}
+
+footer {
+    background-color: #222;
+    color: #fff;
+    font-size: 14px;
+    bottom: 0;
+    position: fixed;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 999;
+}
+
+footer p {
+    margin: 10px 0;
+}
+
+footer i {
+    color: red;
+}
+
+footer a {
+    color: #3c97bf;
+    text-decoration: none;
+}
+    </style>
 </head>
-
 <body>
-  <div class="container">
-    <!--login form -->
-    <div class="login form-box">
-      <form action="login_process.php" method="POST">
-        <h1>Login</h1>
-        
-        <div class="input-box">
-          <input type="text" placeholder="email" name="email" required>
-          <box-icon type='solid' name='user'></box-icon>
-        </div>
-        <div class="input-box">
-          <input type="password" placeholder="password" required name="password">
-          <box-icon name='lock-alt' type='solid'></box-icon>
-        </div>
 
-        
-        <div class="forgot-link">
-          <a href = "#">Forgot Password</a>
-        </div>
-        <button type="submit" class="btn">Login</button>
-        <p>Or Login with social platforms</p>
+<!-- SIGN UP (REGISTER) FORM UPDATED HERE -->
+<div class="container" id="container">
+    <div class="form-container sign-up-container">
+        <form action="signup_process.php" method="POST">
+            <h1>Register</h1>
 
-        <div class="social-icons">
-          <a href="#"><box-icon name='google' type='logo'></box-icon></a>
-          <a href="#"><box-icon name='facebook-square' type='logo'></box-icon></a>
-          <a href="#"><box-icon name='linkedin-square' type='logo'></box-icon></a>
-        </div>
-      </form>
+            <input type="text" placeholder="name" name="name" required />
+            <input type="text" placeholder="email" name="email" required />
+            <input type="password" placeholder="password" name="password" required />
+
+            <select name="role" required>
+                <option value="" hidden>Select Role</option>
+                <option value="customer">Customer</option>
+                <option value="owner">Owner</option>
+            </select>
+
+            <button type="submit">Register</button>
+        </form>
     </div>
 
-    <!-- registeration-form -->
+    <!-- SIGN IN (LOGIN) FORM UPDATED HERE -->
+    <div class="form-container sign-in-container">
+        <form action="login_process.php" method="POST">
+            <h1>Login</h1>
 
-    <div class= "form-box register">
-      <form action="signup_process.php" method="POST">
-        <h1>Register</h1>
-        
-        <div class="input-box">
-          <input type="text" placeholder="name" name="name" required>
-          <box-icon type='solid' name='user'></box-icon>
-        </div>
-        <div class="input-box">
-          <input type="text" placeholder="email" name="email" required>
-          <box-icon type='solid' name='user'></box-icon>
-        </div>
-        <div class="input-box">
-          <input type="password" placeholder="password" required name="password">
-          <box-icon name='lock-alt' type='solid'></box-icon>
-        </div>
-        <div class="input-box">
-           <select name="role" required>
-           <option value="" hidden>Select Role</option>
-           <option value="customer">Customer</option>
-           <option value="owner">Owner</option>
-      </select>
-        </div>
+            <input type="text" placeholder="email" name="email" required />
+            <input type="password" placeholder="password" name="password" required />
 
-      
-
-        <button type="submit" class="btn">Register</button>
-        <p>Or Register with social platforms</p>
-
-        <div class="social-icons">
-          <a href="#"><box-icon name='google' type='logo'></box-icon></a>
-          <a href="#"><box-icon name='facebook-square' type='logo'></box-icon></a>
-          <a href="#"><box-icon name='linkedin-square' type='logo'></box-icon></a>
-        </div>
-      </form>
+            <a href="#">Forgot your password?</a>
+            <button type="submit">Login</button>
+        </form>
     </div>
-    <!--toggle-box -->
-    <div class="toggle-box">
-      <div class="toggle-panel toggle-left">
-        <h1>Hello,Welcome!</h1>
-        <p>Don't have an Account?</p>
-        <button class="btn register-btn">Register</button>
-      </div>
 
-      <div class="toggle-panel toggle-right">
-        <h1>Welcome-back!</h1>
-        <p>Already have an Account?</p>
-        <button class="btn login-btn">Login</button>
-      </div>
+    <!-- OVERLAY SAME -->
+    <div class="overlay-container">
+        <div class="overlay">
+            <div class="overlay-panel overlay-left">
+                <h1>Welcome Back!</h1>
+                <p>To keep connected with us please login with your personal info</p>
+                <button class="ghost" id="signIn">Sign In</button>
+            </div>
+            <div class="overlay-panel overlay-right">
+                <h1>Hello, Friend!</h1>
+                <p>Enter your personal details and start journey with us</p>
+                <button class="ghost" id="signUp">Sign Up</button>
+            </div>
+        </div>
     </div>
-  </div>
+</div>
 
-  <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
-    crossorigin=""></script>
-  <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
-  <script src="js/script.js"></script>
+<footer>
+    <p>
+        Created with <i class="fa fa-heart"></i> by
+        <a target="_blank" href="#">Arun</a>
+        - Read how I created this and how you can join the challenge
+        <a target="_blank" href="#">here</a>.
+    </p>
+</footer>
+
+<script>
+const signUpButton = document.getElementById('signUp');
+const signInButton = document.getElementById('signIn');
+const container = document.getElementById('container');
+
+signUpButton.addEventListener('click', () => {
+    container.classList.add("right-panel-active");
+});
+
+signInButton.addEventListener('click', () => {
+    container.classList.remove("right-panel-active");
+});
+</script>
+
 </body>
-
 </html>
