@@ -1,106 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Home</title>
-   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
-     crossorigin=""/>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
-  <link rel="stylesheet" href="css/style.css"/>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
-  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login/Sign-up</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin="" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="css/login.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
 </head>
+
 <body>
-  <!-- HEADER -->
-  <section class="header">
-    <a href="login.php" class="logo">parking.</a>
-    <nav class="navbar">
-      <a href="sign.php">sign-in</a>
-   
-    </nav>
-    <div id="menu-btn" class="fas fa-bars"></div>
-  </section>
-<!--home-->
-<section class="home">
-    <div class="home-slider swiper">
-        <div class="swiper-wrapper">
-            <div class="slide swiper-slide" style="background:url(images/home-slide-1.png) no-repeat">
-             <div class="content">
-                  <span>explore, discover , travel</span>
-                  <h3>park around the world</h3>
-                  <a href="package.php" class="btn">discover more</a>
-                </div>
-            </div>
-            <div class="slide swiper-slide" style="background:url(images/home-slide-2.png) no-repeat">
-                <div class="content">
-                  <span>explore, discover , travel</span>
-                  <h3>park around the world</h3>
-                  <a href="package.php" class="btn">discover more</a>
-                </div>
-            </div>
-            <div class="slide swiper-slide" style="background:url(images/home-slide-3.png) no-repeat">
-                <div class="content">
-                  <span>explore, discover , travel</span>
-                  <h3>travel around the world</h3>
-                  <a href="package.php" class="btn">discover more</a>
-                </div>
-            </div>
+  <div class="container">
+    <!--login form -->
+    <div class="login form-box">
+      <form action="#">
+        <h1>Login</h1>
+        <div class="input-box">
+          <input type="password" placeholder="password" required>
+          <box-icon name='lock-alt' type='solid'></box-icon>
         </div>
-         <div class="swiper-button-next">></div>
-        <div class="swiper-button-prev"><</div>
- 
+
+        <div class="input-box">
+          <input type="text" placeholder="Username" required>
+          <box-icon type='solid' name='user'></box-icon>
+        </div>
+
+        <div class="input-box">
+          <input type="email" placeholder="email" required>
+          <i class='bx  bx-mail-open'></i>
+        </div>
+        <div class="forgot-link">
+          <a href = "#">Forgot Password</a>
+        </div>
+        <button type="submit" class="btn">Login</button>
+        <p>Or Login with social platforms</p>
+
+        <div class="social-icons">
+          <a href="#"><box-icon name='google' type='logo'></box-icon></a>
+          <a href="#"><box-icon name='facebook-square' type='logo'></box-icon></a>
+          <a href="#"><box-icon name='linkedin-square' type='logo'></box-icon></a>
+        </div>
+      </form>
     </div>
 
-</section>
-  <h1 class="login">login</h1>
-  <form action="" method="get"><h3>email</h3>
-    <input type="email" name="" id="">
-    <h3>password</h3>
-    <input type="password" name="" id="">
-   <button type="submit"> <a href="home.php">login</a></button>
-  </form>
-  <!-- FOOTER -->
-  <section class="footer">
-    <div class="box-container">
-      <div class="box">
-        <h3>quick links</h3>
-        <a href="sign-in.php"><i class="fas fa-angle-right"></i>sign-in</a>
-        <a href="login.php"><i class="fas fa-angle-right"></i>login</a>
-       
+    <!-- registeration-form -->
+
+    <div class= "form-box register">
+      <form action="#">
+        <h1>Register</h1>
+        <div class="input-box">
+          <input type="password" placeholder="password" required>
+          <box-icon name='lock-alt' type='solid'></box-icon>
+        </div>
+
+        <div class="input-box">
+          <input type="text" placeholder="Username" required>
+          <box-icon type='solid' name='user'></box-icon>
+        </div>
+
+        <div class="input-box">
+          <input type="email" placeholder="email" required>
+          <i class='bx  bx-mail-open'></i>
+        </div>
+
+        <button type="submit" class="btn">Register</button>
+        <p>Or Register with social platforms</p>
+
+        <div class="social-icons">
+          <a href="#"><box-icon name='google' type='logo'></box-icon></a>
+          <a href="#"><box-icon name='facebook-square' type='logo'></box-icon></a>
+          <a href="#"><box-icon name='linkedin-square' type='logo'></box-icon></a>
+        </div>
+      </form>
+    </div>
+    <!--toggle-box -->
+    <div class="toggle-box">
+      <div class="toggle-panel toggle-left">
+        <h1>Hello,Welcome!</h1>
+        <p>Don't have an Account?</p>
+        <button class="btn register-btn">Register</button>
       </div>
 
-      <div class="box">
-        <h3>extra links</h3>
-        <a href="#"><i class="fas fa-angle-right"></i>ask questions</a>
-        <a href="#"><i class="fas fa-angle-right"></i>about</a>
-        <a href="#"><i class="fas fa-angle-right"></i>privacy policy</a>
-        <a href="#"><i class="fas fa-angle-right"></i>terms of use</a>
-      </div>
-
-      <div class="box">
-        <h3>contact info</h3>
-        <a href="#"><i class="fas fa-phone"></i>+91 8699771214</a>
-        <a href="#"><i class="fas fa-envelope"></i>vansshbhargav@gmail.com</a>
-        <a href="#"><i class="fas fa-map"></i>chandigarh, india</a>
-      </div>
-
-      <div class="box">
-        <h3>follow us</h3>
-        <a href="#"><i class="fab fa-instagram"></i>instagram</a>
-        <a href="#"><i class="fab fa-x"></i>X</a>
-        <a href="#"><i class="fab fa-linkedin"></i>linkedin</a>
+      <div class="toggle-panel toggle-right">
+        <h1>Welcome-back!</h1>
+        <p>Already have an Account?</p>
+        <button class="btn login-btn">Login</button>
       </div>
     </div>
+  </div>
 
-    <div class="credit"> <span></span></div>
-  </section>
-
- <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
-     crossorigin=""></script>
+  <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin=""></script>
   <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
   <script src="js/script.js"></script>
 </body>
+
 </html>
