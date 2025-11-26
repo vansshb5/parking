@@ -1,13 +1,11 @@
 <?php
 session_start();
 
-// Only owners allowed
 if (!isset($_SESSION['role']) || $_SESSION['role'] !== 'owner') {
     echo "Access denied.";
     exit();
 } 
 
-// DB Connection
 $conn = new mysqli("localhost", "root", "", "parking_system");
 if ($conn->connect_error) {
     die("Connection Failed: " . $conn->connect_error);
@@ -15,9 +13,14 @@ if ($conn->connect_error) {
 
 $owner_id = $_SESSION['user_id'];
 
-$sql = "SELECT * FROM parking_spots WHERE owner_id = '$owner_id'";
-$result = $conn->query($sql);
+$sql = "SELECT p.*, 
+        (SELECT COUNT(*) FROM bookings 
+         WHERE bookings.spot_id = p.spot_id 
+         AND bookings.status = 'booked') AS booked_slots
+        FROM parking_spots p
+        WHERE p.owner_id = '$owner_id'";
 
+$result = $conn->query($sql);
 ?>
 
 
@@ -87,7 +90,6 @@ $result = $conn->query($sql);
 
 </section>
 <h2>Your Parking Spots</h2>
-<a href="owner_dashboard.php">Back to Dashboard</a><br><br>
 
 <table border="1" cellpadding="6">
     <tr>
@@ -95,24 +97,27 @@ $result = $conn->query($sql);
         <th>Location</th>
         <th>Price/hr</th>
         <th>Total Slots</th>
+        <th>Booked</th>
         <th>Available</th>
     </tr>
 
-    <?php
-    if ($result->num_rows > 0) {
-        while ($row = $result->fetch_assoc()) {
-            echo "<tr>
-                    <td>".$row['spot_id']."</td>
-                    <td>".$row['location']."</td>
-                    <td>".$row['price_per_hour']."</td>
-                    <td>".$row['total_slots']."</td>
-                    <td>".$row['available_slots']."</td>
-                  </tr>";
-        }
-    } else {
-        echo "<tr><td colspan='5'>No parking spots added yet.</td></tr>";
+<?php
+if ($result->num_rows > 0) {
+    while ($row = $result->fetch_assoc()) {
+        $available = $row['total_slots'] - $row['booked_slots'];
+        echo "<tr>
+                <td>".$row['spot_id']."</td>
+                <td>".$row['location']."</td>
+                <td>".$row['price_per_hour']."</td>
+                <td>".$row['total_slots']."</td>
+                <td>".$row['booked_slots']."</td>
+                <td>".$available."</td>
+              </tr>";
     }
-    ?>
+} else {
+    echo "<tr><td colspan='6'>No parking spots added yet.</td></tr>";
+}
+?>
 </table>
 <!--footer-->
 <section class="footer">

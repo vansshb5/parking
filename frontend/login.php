@@ -19,22 +19,19 @@
   <div class="container">
     <!--login form -->
     <div class="login form-box">
-      <form action="#">
+      <form action="login_process.php" method="POST">
         <h1>Login</h1>
+        
         <div class="input-box">
-          <input type="password" placeholder="password" required>
+          <input type="text" placeholder="email" name="email" required>
+          <box-icon type='solid' name='user'></box-icon>
+        </div>
+        <div class="input-box">
+          <input type="password" placeholder="password" required name="password">
           <box-icon name='lock-alt' type='solid'></box-icon>
         </div>
 
-        <div class="input-box">
-          <input type="text" placeholder="Username" required>
-          <box-icon type='solid' name='user'></box-icon>
-        </div>
-
-        <div class="input-box">
-          <input type="email" placeholder="email" required>
-          <i class='bx  bx-mail-open'></i>
-        </div>
+        
         <div class="forgot-link">
           <a href = "#">Forgot Password</a>
         </div>
@@ -52,22 +49,30 @@
     <!-- registeration-form -->
 
     <div class= "form-box register">
-      <form action="#">
+      <form action="signup_process.php" method="POST">
         <h1>Register</h1>
+        
         <div class="input-box">
-          <input type="password" placeholder="password" required>
-          <box-icon name='lock-alt' type='solid'></box-icon>
-        </div>
-
-        <div class="input-box">
-          <input type="text" placeholder="Username" required>
+          <input type="text" placeholder="name" name="name" required>
           <box-icon type='solid' name='user'></box-icon>
         </div>
-
         <div class="input-box">
-          <input type="email" placeholder="email" required>
-          <i class='bx  bx-mail-open'></i>
+          <input type="text" placeholder="email" name="email" required>
+          <box-icon type='solid' name='user'></box-icon>
         </div>
+        <div class="input-box">
+          <input type="password" placeholder="password" required name="password">
+          <box-icon name='lock-alt' type='solid'></box-icon>
+        </div>
+        <div class="input-box">
+           <select name="role" required>
+           <option value="" hidden>Select Role</option>
+           <option value="customer">Customer</option>
+           <option value="owner">Owner</option>
+      </select>
+        </div>
+
+      
 
         <button type="submit" class="btn">Register</button>
         <p>Or Register with social platforms</p>
