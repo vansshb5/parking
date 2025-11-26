@@ -64,3 +64,17 @@ L.marker([30.7333, 76.7794])
   .addTo(map)
   .bindPopup("Chandigarh, India")
   .openPopup();
+
+
+//animation for login and signIn page
+const container = document.querySelector('.container');
+const registerBtn = document.querySelector('.register-btn');
+const loginBtn = document.querySelector('.login-btn');
+
+registerBtn.addEventListener('click', () => {
+  container.classList.add('active');
+});
+
+loginBtn.addEventListener('click', () => {
+  container.classList.remove('active');
+});
